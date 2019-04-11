@@ -1,0 +1,283 @@
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #666;
+
+}
+
+
+.pimg1, .pimg2, .pimg3{
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* 
+  fixed background = parallax
+  scroll = normal
+  */
+}
+
+.pimg1{
+  /* background:url('../../public/images/city-parallax.jpeg'); */
+  min-height: 100%;
+  
+}
+
+.pimg2{
+  /* background:url('../../public/images/parallax-dos.jpeg'); */
+  min-height: 400px;
+}
+
+.pimg3{
+  /* background:url('../../public/images/tres-parallax.jpeg'); */
+  min-height: 400px;
+}
+
+.section{
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light{
+  background-color: lightgrey;
+  color: #666;
+  height: 80vh;
+
+}
+
+.section-dark{
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+
+.ptext .border{
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+.border{
+  height: 100vh;
+}
+
+
+/* this below will make the second and third title transparent, choose wisely */
+/* .ptext .border.trans{
+  background-color: transparent;
+} */
+
+@media(max-width: 568px){
+  .pimg1, .pimg2, .pimg3{
+      background-attachment: scroll;
+  }
+}
+
+button {
+  /* border-top: 1px solid #d4d4d4; */
+  /* background: #000000; */
+  background: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(#000000));
+  background: -webkit-linear-gradient(top, #b0b0b0, #000000);
+  background: -moz-linear-gradient(top, #b0b0b0, #000000);
+  background: -ms-linear-gradient(top, #b0b0b0, #000000);
+  background: -o-linear-gradient(top, #b0b0b0, #000000);
+  padding: 12px 20px;
+  font-size: 120%;
+  /* -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  border-radius: 21px; */
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: rgba(46, 46, 46, 0); 
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  }
+button:hover {
+  border-top-color: #84a184;
+  background: #84a184;
+  color: #ffffff;
+  }
+button:active {
+  border-top-color: #ffffff;
+  background: #ffffff;
+  }
+
+
+.section{
+  display: flex;
+  justify-content: center;
+}
+
+.width-thirty{
+  width: 30vw;
+  /* height: 40vh; */
+  display: flex;
+  flex-direction: column;
+  /* align-content: space-between; */
+  align-content: center ;
+}
+
+footer{
+  position: relative;
+  bottom: 0;
+  height: 3vh;
+  background-color: darkgrey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  border-radius: 6px;
+}
+
+.each-input{
+  display: flex;
+  flex-flow: column;
+}
+
+textarea{
+  margin-top: 1vh;
+  width: 100%;
+  height: 10vh;
+  border-radius: 6px;
+}
+
+form button{
+  margin-top: 2vh;
+}
+
+nav.smaller{
+  height: 5vh;
+}
+nav{
+  position: absolute;
+  height: 10vh;
+  background-color: black;
+  /* background-color: rgba(192,192,192,0.6); */
+  color: black;
+  width: 100%;
+  transition: ease 1s;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  margin-left: 2vw;
+}
+
+a:hover{
+  color: yellow;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.contact-page{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 60vw;
+  justify-content: flex-start;
+
+}
+
+.form-control{
+  position: relative;
+  margin: 5vh 10vh 0 0;
+  width: 100%;
+  max-width: 280px;
+  -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 12px 0;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #C8CCD4;
+    background: none;
+    border-radius: 0;
+    color: #223254;
+    transition: all .15s ease;
+    height: 5vh;
+
+}
+#message{
+  height: 10vh;
+  align-content: center;
+}
+
+/* [aos="fade"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="fade"].aos-animate {
+  opacity: 1;
+} */
+.some-item{
+  /* background-color: white;  */
+  margin: 2vh 0 2vh 0;
+  height: 20vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.special-logos{
+  height: 15vh;
+}
+.button-scroll{
+
+  position: fixed; /* Fixed/sticky position */
+  top: 20px; /* Place the button at the bottom of the page */
+  left: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}

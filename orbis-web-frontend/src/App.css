@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* { box-sizing: border-box; }
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  /* color: #666; */
+}
+
+/* STRUCTURE */
+/* todo esto es para los team members */
+
+.wrapper {
+	padding: 5px;
+	max-width: 80%;
+	width: 95%;
+  margin: 20px auto;
+  color: white;
+
+}
+header {
+  padding: 0 15px;
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 4vh;
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	margin: 5px 0;
+  height: 30vh;
+  text-align: center;
+}
+
+.column-one{
+  background-image: url('https://avatars0.githubusercontent.com/u/43795079?s=460&v=4');
+  background-size: cover;
+}
+
+.column-two{
+  background-image: url('https://avatars0.githubusercontent.com/u/45401557?s=460&v=4');
+  background-size: cover;
+}
+
+.column-three{
+  background-image: url('https://avatars0.githubusercontent.com/u/43795079?s=460&v=4');
+  background-size: cover;
+}
+
+.column:hover{
+
+}
+
+.column {
+  /* flex: 1; */
+  width: 16vw;
+  /* border: 1px solid gray; */
+  border-radius: 200px;
+	/* margin: 2px; */
+	padding: 10px;
+	/* &:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; } */
+	height: 32vh;
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
+
+.team-members{
+  height: 55vh;
+  background-color: #666;
+}
+/* Hasta aqui */
