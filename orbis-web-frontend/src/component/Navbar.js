@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 export default class Nav extends React.Component{
 
     componentDidMount(){
@@ -31,9 +31,14 @@ export default class Nav extends React.Component{
         return(
             <div>
                 <div className="navbar">
-                    <Link>About us</Link>
-                    <Link>Learn More</Link>
-                    <Link>Team</Link>
+                    
+                        <img id="company-logo" src="https://res.cloudinary.com/dpt8pbi8n/image/upload/v1555015324/bank-logo-gif.gif" alt="company-logo" />
+                  
+                    <NavLink id="links-nav" to="#">About us</NavLink>
+                   
+                    <NavLink id="links-nav" to="#">Learn More</NavLink>
+            
+                    <NavLink id="links-nav" to="#">Team</NavLink>
                     
                 </div>
     
