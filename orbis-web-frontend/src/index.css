@@ -170,18 +170,6 @@ form button{
   margin-top: 2vh;
 }
 
-nav.smaller{
-  height: 5vh;
-}
-nav{
-  position: absolute;
-  height: 10vh;
-  background-color: black;
-  /* background-color: rgba(192,192,192,0.6); */
-  color: black;
-  width: 100%;
-  transition: ease 1s;
-}
 
 ul{
   list-style: none;
@@ -246,14 +234,7 @@ code {
   align-content: center;
 }
 
-/* [aos="fade"] {
-  opacity: 0;
-  transition-property: opacity;
-}
 
-[aos="fade"].aos-animate {
-  opacity: 1;
-} */
 .some-item{
   /* background-color: white;  */
   margin: 2vh 0 2vh 0;
@@ -266,16 +247,29 @@ code {
 .special-logos{
   height: 15vh;
 }
-.button-scroll{
 
+.navbar{
+  display: flex;
+  height: 10vh;
+  background-color: #666;
+  justify-content: center;
+  align-items: flex-end;
+  /* padding-bottom: 1vh; */
+  font-size: 140%;
+  border: 1px solid black;
+}
+
+
+
+.button-scroll{
   position: fixed; /* Fixed/sticky position */
-  top: 20px; /* Place the button at the bottom of the page */
-  left: 30px; /* Place the button 30px from the right */
+  bottom: 15px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
+
+  height: 12vh;
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
