@@ -14,18 +14,18 @@ class SignContainer extends Component{
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         axios({
-            method: "POST", 
-            url:"http://localhost:3000/contact", 
+            method: "POST",
+            url:"http://localhost:3000/contact",
             data: {
-                name: name,   
-                email: email,  
+                name: name,
+                email: email,
                 message: message
             }
         }).then((response)=>{
             if (response.data.msg === 'success'){
                 alert("Message Sent.");
                 document.getElementById("contact-form").reset()
-                
+
             }else if(response.data.msg === 'fail'){
                 alert("Message failed to send.")
             }
@@ -40,15 +40,15 @@ class SignContainer extends Component{
                 <form id="contact-form" onSubmit={this.handleSubmit} method="POST">
                     {/* <div className="form-group"> */}
                         {/* <label htmlFor="name">Name</label> */}
-                        <input placeholder="name"type="text" className="form-control" id="name" />
+                        <input placeholder="Name"type="text" className="form-control" id="name" />
                     {/* </div> */}
                     {/* <div className="form-group"> */}
                         {/* <label htmlFor="exampleInputEplaceholder="name"mail1">Email address</label> */}
-                        <input placeholder="email"type="email" className="form-control" id="email" aria-describedby="emailHelp" />
+                        <input placeholder="Email"type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                     {/* </div> */}
                     {/* <div className="form-group"> */}
                         {/* <label htmlFor="message">Message</label> */}
-                        <input placeholder="message"className="form-control" id="message"></input>
+                        <textarea placeholder="Message" className="form-control" id="message"/>
                     {/* </div> */}
                     <div>
                     <button type="submit" className="btn btn-primary">Submit</button>
